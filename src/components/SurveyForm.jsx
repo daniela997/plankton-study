@@ -16,6 +16,8 @@ const SurveyForm = ({ familiarity }) => {
   const [completed, setCompleted] = useState(false);
   const [error, setError] = useState(null);
   const [offlineMode, setOfflineMode] = useState(false);
+  const [completionComment, setCompletionComment] = useState('');
+  const [commentStatus, setCommentStatus] = useState('idle');
 
   useEffect(() => {
     initializeSession();
@@ -78,6 +80,7 @@ const SurveyForm = ({ familiarity }) => {
       if (existingSession && !existingSession.completedAt) {
         // Resume existing session
         setSession(existingSession);
+        setCompletionComment(existingSession.comment ?? '');
         const nextCategoryId = existingSession.shuffledCategories[existingSession.currentIndex];
         const pair = generatePairForCategory(nextCategoryId);
         setCurrentPair({ categoryId: nextCategoryId, ...pair });
@@ -97,6 +100,7 @@ const SurveyForm = ({ familiarity }) => {
         const firstPair = generatePairForCategory(firstCategoryId);
 
         setSession(newSession);
+        setCompletionComment(newSession.comment ?? '');
         setCurrentPair({ categoryId: firstCategoryId, ...firstPair });
 
         // Save to localStorage and URL
@@ -183,6 +187,29 @@ const SurveyForm = ({ familiarity }) => {
     window.location.reload();
   };
 
+  const handleCommentSubmit = async () => {
+    if (!session) return;
+    if (offlineMode) {
+      setCommentStatus('offline');
+      return;
+    }
+
+    setCommentStatus('saving');
+    const updatedSession = {
+      ...session,
+      comment: completionComment
+    };
+
+    try {
+      await saveParticipantSession(updatedSession);
+      setSession(updatedSession);
+      setCommentStatus('saved');
+    } catch (err) {
+      console.error('Failed to save comment', err);
+      setCommentStatus('error');
+    }
+  };
+
   if (loading) {
     return (
       <div className="survey-container">
@@ -226,6 +253,29 @@ const SurveyForm = ({ familiarity }) => {
             <p><strong>Categories completed:</strong> {Object.keys(session.responses).length}</p>
             <p><strong>Completed at:</strong> {new Date(session.completedAt).toLocaleString()}</p>
           <p><strong>Real images correctly identified:</strong> {successCount} of {totalAnswered} ({successPercent}%)</p>
+          </div>
+
+          <div className="comment-section">
+            <label htmlFor="completion-comment">
+              Optional comments for the study team
+            </label>
+            <textarea
+              id="completion-comment"
+              value={completionComment}
+              onChange={(event) => setCompletionComment(event.target.value)}
+              placeholder="Thoughts about the images, difficulty, or anything we should know..."
+              disabled={commentStatus === 'saved'}
+              className={commentStatus === 'saved' ? 'comment-disabled' : ''}
+            />
+            <button
+              className="save-comment"
+              onClick={handleCommentSubmit}
+              disabled={commentStatus === 'saving' || commentStatus === 'saved'}
+            >
+              {commentStatus === 'saved' ? 'Comment saved' : 'Save comment'}
+            </button>
+            {commentStatus === 'error' && <p className="comment-feedback error">Unable to save comment.</p>}
+            {commentStatus === 'offline' && <p className="comment-feedback warning">Comment saved locally? Try again when online.</p>}
           </div>
 
           <div className="completion-actions">

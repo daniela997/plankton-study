@@ -1,0 +1,204 @@
+{
+  "categories": [
+    {
+      "id": "prompt_Animalia_Arthropoda_Copepoda_None_None_None_None",
+      "name": "prompt_Animalia_Arthropoda_Copepoda_None_None_None_None",
+      "subcategories": {
+        "A": [
+          "prompt_Animalia_Arthropoda_Copepoda_None_None_None_None_A_2f7b820c.png"
+        ],
+        "B": [
+          "prompt_Animalia_Arthropoda_Copepoda_None_None_None_None_B_2f7b820c.png"
+        ]
+      }
+    },
+    {
+      "id": "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Asterolamprales_Asterolampraceae_Asteromphalus_flabellatus",
+      "name": "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Asterolamprales_Asterolampraceae_Asteromphalus_flabellatus",
+      "subcategories": {
+        "A": [
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Asterolamprales_Asterolampraceae_Asteromphalus_flabellatus_A_15b50073.png"
+        ],
+        "B": [
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Asterolamprales_Asterolampraceae_Asteromphalus_flabellatus_B_15b50073.png"
+        ]
+      }
+    },
+    {
+      "id": "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Bacillariales_Bacillariaceae_Pseudo-nitzschia_None",
+      "name": "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Bacillariales_Bacillariaceae_Pseudo-nitzschia_None",
+      "subcategories": {
+        "A": [
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Bacillariales_Bacillariaceae_Pseudo-nitzschia_None_A_d623de3f.png"
+        ],
+        "B": [
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Bacillariales_Bacillariaceae_Pseudo-nitzschia_None_B_d623de3f.png"
+        ]
+      }
+    },
+    {
+      "id": "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Corethrales_Corethraceae_Corethron_None",
+      "name": "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Corethrales_Corethraceae_Corethron_None",
+      "subcategories": {
+        "A": [
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Corethrales_Corethraceae_Corethron_None_A_ed3cf91f.png"
+        ],
+        "B": [
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Corethrales_Corethraceae_Corethron_None_B_ed3cf91f.png"
+        ]
+      }
+    },
+    {
+      "id": "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Hemiaulales_Hemiaulaceae_Cerataulina_pelagica",
+      "name": "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Hemiaulales_Hemiaulaceae_Cerataulina_pelagica",
+      "subcategories": {
+        "A": [
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Hemiaulales_Hemiaulaceae_Cerataulina_pelagica_A_0be67d52.png"
+        ],
+        "B": [
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Hemiaulales_Hemiaulaceae_Cerataulina_pelagica_B_0be67d52.png"
+        ]
+      }
+    },
+    {
+      "id": "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Hemiaulales_Hemiaulaceae_Eucampia_None",
+      "name": "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Hemiaulales_Hemiaulaceae_Eucampia_None",
+      "subcategories": {
+        "A": [
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Hemiaulales_Hemiaulaceae_Eucampia_None_A_2340a732.png",
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Hemiaulales_Hemiaulaceae_Eucampia_None_A_532924e5.png",
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Hemiaulales_Hemiaulaceae_Eucampia_None_A_cb4a0d3a.png"
+        ],
+        "B": [
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Hemiaulales_Hemiaulaceae_Eucampia_None_B_2340a732.png",
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Hemiaulales_Hemiaulaceae_Eucampia_None_B_532924e5.png",
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Hemiaulales_Hemiaulaceae_Eucampia_None_B_cb4a0d3a.png"
+        ]
+      }
+    },
+    {
+      "id": "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Lithodesmiales_Lithodesmiaceae_Ditylum_brightwellii",
+      "name": "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Lithodesmiales_Lithodesmiaceae_Ditylum_brightwellii",
+      "subcategories": {
+        "A": [
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Lithodesmiales_Lithodesmiaceae_Ditylum_brightwellii_A_bdeb4c53.png",
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Lithodesmiales_Lithodesmiaceae_Ditylum_brightwellii_A_de5fa66e.png"
+        ],
+        "B": [
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Lithodesmiales_Lithodesmiaceae_Ditylum_brightwellii_B_bdeb4c53.png",
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Lithodesmiales_Lithodesmiaceae_Ditylum_brightwellii_B_de5fa66e.png"
+        ]
+      }
+    },
+    {
+      "id": "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Naviculales_Pleurosigmataceae_Pleurosigma_None",
+      "name": "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Naviculales_Pleurosigmataceae_Pleurosigma_None",
+      "subcategories": {
+        "A": [
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Naviculales_Pleurosigmataceae_Pleurosigma_None_A_fba6dfa2.png"
+        ],
+        "B": [
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Naviculales_Pleurosigmataceae_Pleurosigma_None_B_fba6dfa2.png"
+        ]
+      }
+    },
+    {
+      "id": "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Paraliales_Paraliaceae_Paralia_sulcata",
+      "name": "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Paraliales_Paraliaceae_Paralia_sulcata",
+      "subcategories": {
+        "A": [
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Paraliales_Paraliaceae_Paralia_sulcata_A_0518b72e.png"
+        ],
+        "B": [
+          "prompt_Chromista_Heterokontophyta_Bacillariophyceae_Paraliales_Paraliaceae_Paralia_sulcata_B_0518b72e.png"
+        ]
+      }
+    },
+    {
+      "id": "prompt_Chromista_Myzozoa_Dinophyceae_Dinophysales_Oxyphysaceae_Phalacroma_rotundatum",
+      "name": "prompt_Chromista_Myzozoa_Dinophyceae_Dinophysales_Oxyphysaceae_Phalacroma_rotundatum",
+      "subcategories": {
+        "A": [
+          "prompt_Chromista_Myzozoa_Dinophyceae_Dinophysales_Oxyphysaceae_Phalacroma_rotundatum_A_9fa28b4f.png"
+        ],
+        "B": [
+          "prompt_Chromista_Myzozoa_Dinophyceae_Dinophysales_Oxyphysaceae_Phalacroma_rotundatum_B_9fa28b4f.png"
+        ]
+      }
+    },
+    {
+      "id": "prompt_Chromista_Myzozoa_Dinophyceae_Gonyaulacales_Ceratiaceae_Tripos_lineatus",
+      "name": "prompt_Chromista_Myzozoa_Dinophyceae_Gonyaulacales_Ceratiaceae_Tripos_lineatus",
+      "subcategories": {
+        "A": [
+          "prompt_Chromista_Myzozoa_Dinophyceae_Gonyaulacales_Ceratiaceae_Tripos_lineatus_A_971c1e53.png"
+        ],
+        "B": [
+          "prompt_Chromista_Myzozoa_Dinophyceae_Gonyaulacales_Ceratiaceae_Tripos_lineatus_B_971c1e53.png"
+        ]
+      }
+    },
+    {
+      "id": "prompt_Chromista_Myzozoa_Dinophyceae_Gymnodiniales_Kareniaceae_Karlodinium_None",
+      "name": "prompt_Chromista_Myzozoa_Dinophyceae_Gymnodiniales_Kareniaceae_Karlodinium_None",
+      "subcategories": {
+        "A": [
+          "prompt_Chromista_Myzozoa_Dinophyceae_Gymnodiniales_Kareniaceae_Karlodinium_None_A_a14a6235.png"
+        ],
+        "B": [
+          "prompt_Chromista_Myzozoa_Dinophyceae_Gymnodiniales_Kareniaceae_Karlodinium_None_B_a14a6235.png"
+        ]
+      }
+    },
+    {
+      "id": "prompt_Chromista_Myzozoa_Dinophyceae_Prorocentrales_Prorocentraceae_Mesoporos_perforatus",
+      "name": "prompt_Chromista_Myzozoa_Dinophyceae_Prorocentrales_Prorocentraceae_Mesoporos_perforatus",
+      "subcategories": {
+        "A": [
+          "prompt_Chromista_Myzozoa_Dinophyceae_Prorocentrales_Prorocentraceae_Mesoporos_perforatus_A_2d348a5b.png"
+        ],
+        "B": [
+          "prompt_Chromista_Myzozoa_Dinophyceae_Prorocentrales_Prorocentraceae_Mesoporos_perforatus_B_2d348a5b.png"
+        ]
+      }
+    },
+    {
+      "id": "prompt_Chromista_Ochrophyta_Dictyochophyceae_Dictyochales_Dictyochaceae_Dictyocha_fibula",
+      "name": "prompt_Chromista_Ochrophyta_Dictyochophyceae_Dictyochales_Dictyochaceae_Dictyocha_fibula",
+      "subcategories": {
+        "A": [
+          "prompt_Chromista_Ochrophyta_Dictyochophyceae_Dictyochales_Dictyochaceae_Dictyocha_fibula_A_b2b6783c.png"
+        ],
+        "B": [
+          "prompt_Chromista_Ochrophyta_Dictyochophyceae_Dictyochales_Dictyochaceae_Dictyocha_fibula_B_b2b6783c.png"
+        ]
+      }
+    },
+    {
+      "id": "prompt_Chromista_Ochrophyta_Dictyochophyceae_Florenciellales_Florenciellales-incertae-sedis_Pseudochattonella_farcimen",
+      "name": "prompt_Chromista_Ochrophyta_Dictyochophyceae_Florenciellales_Florenciellales-incertae-sedis_Pseudochattonella_farcimen",
+      "subcategories": {
+        "A": [
+          "prompt_Chromista_Ochrophyta_Dictyochophyceae_Florenciellales_Florenciellales-incertae-sedis_Pseudochattonella_farcimen_A_404f7d08.png"
+        ],
+        "B": [
+          "prompt_Chromista_Ochrophyta_Dictyochophyceae_Florenciellales_Florenciellales-incertae-sedis_Pseudochattonella_farcimen_B_404f7d08.png"
+        ]
+      }
+    },
+    {
+      "id": "prompt_None_None_None_None_None_None_None",
+      "name": "prompt_None_None_None_None_None_None_None",
+      "subcategories": {
+        "A": [
+          "prompt_None_None_None_None_None_None_None_A_a1f59a2f.png",
+          "prompt_None_None_None_None_None_None_None_A_f7476afa.png"
+        ],
+        "B": [
+          "prompt_None_None_None_None_None_None_None_B_a1f59a2f.png",
+          "prompt_None_None_None_None_None_None_None_B_f7476afa.png"
+        ]
+      }
+    }
+  ]
+}

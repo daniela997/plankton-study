@@ -96,10 +96,6 @@ const ImagePair = ({ pair, onSelect }) => {
 
   return (
     <div className="image-pair">
-      <div className="pair-header">
-        <h3>Category {pair.categoryId}</h3>
-      </div>
-
       <div className="images-container" role="group" aria-label={`Image pair for category ${pair.categoryId}`}>
         {renderImage('left', pair.left, pair.leftSubcategory)}
         {renderImage('right', pair.right, pair.rightSubcategory)}

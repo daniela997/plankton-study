@@ -55,8 +55,13 @@ export const generateSessionId = () => {
 
 // Validate session data structure
 export const validateSession = (session) => {
+  const validIds = new Set(surveyConfig.categories.map(c => c.id));
+  const categoriesValid = Array.isArray(session?.shuffledCategories)
+    && session.shuffledCategories.every(id => validIds.has(id));
+
   return session &&
     session.participantId &&
+    categoriesValid &&
     Array.isArray(session.shuffledCategories) &&
     typeof session.responses === 'object' &&
     typeof session.currentIndex === 'number';

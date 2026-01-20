@@ -242,8 +242,8 @@ const SurveyForm = ({ familiarity }) => {
         </div>
       )}
       <header className="survey-header">
-        <h1>Plankton Image Selection Survey</h1>
-        <p>Help us by selecting your preferred image in each pair.</p>
+        <h1>Plankton Image Survey</h1>
+        <p>Which of the two images do you think looks more realistic?</p>
         {offlineMode && (
           <div className="offline-indicator">
             ⚠️ Offline Mode - Responses not being saved
@@ -251,23 +251,18 @@ const SurveyForm = ({ familiarity }) => {
         )}
       </header>
 
-      <ProgressBar
-        current={session.currentIndex}
-        total={session.shuffledCategories.length}
-      />
-
-      <div className="instructions">
-        <h3>Instructions</h3>
-        <p>Look at the two plankton images below and click on the one you think is real.</p>
-        <p>You can pause and resume this survey anytime using the URL.</p>
-      </div>
-
       {currentPair && (
-        <ImagePair
-          key={currentPair.categoryId}
-          pair={currentPair}
-          onSelect={handleSelection}
-        />
+        <>
+          <ImagePair
+            key={currentPair.categoryId}
+            pair={currentPair}
+            onSelect={handleSelection}
+          />
+          <ProgressBar
+            current={session.currentIndex}
+            total={session.shuffledCategories.length}
+          />
+        </>
       )}
 
       <div className="session-info">

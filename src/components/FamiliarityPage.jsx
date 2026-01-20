@@ -35,8 +35,8 @@ const FamiliarityPage = ({ familiarity, setFamiliarity, onSubmit }) => {
     <div className="intro-page">
       <div className="intro-card">
         <h2>Experience check</h2>
-        <p>Please rate your familiarity with the following topics on a scale from 1 (not familiar) to 5 (very familiar).</p>
-        {renderScale('planktonImaging', '1. Plankton imaging (microscopy, imaging flow cytobot, etc.)')}
+        <p>Please rate your expertise in the following areas on a scale from 1 (not familiar) to 5 (expert).</p>
+        {renderScale('planktonImaging', '1. Plankton imaging (microscopy, IFCB or other imaging systems, taxonomic identification, etc.)')}
         {renderScale('mlExperience', '2. Machine learning / generative AI techniques')}
 
         <button onClick={onSubmit} disabled={!isComplete}>

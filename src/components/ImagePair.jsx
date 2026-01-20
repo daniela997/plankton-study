@@ -59,13 +59,11 @@ const ImagePair = ({ pair, onSelect }) => {
       {!loaded[position] && !loadingError[position] && (
         <div className="loading-placeholder">
           <div className="spinner"></div>
-          <p>Loading image...</p>
         </div>
       )}
 
       {loadingError[position] && (
         <div className="error-placeholder">
-          <p>⚠️ Image failed to load</p>
           <p className="error-details">{imageSrc.split('/').pop()}</p>
         </div>
       )}
@@ -73,17 +71,25 @@ const ImagePair = ({ pair, onSelect }) => {
       <img
         src={imageSrc}
         alt={`Plankton option ${subcategory}`}
+        role="button"
+        tabIndex={0}
         onClick={() => handleClick(position, subcategory)}
+        onKeyDown={(event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            handleClick(position, subcategory);
+          }
+        }}
         onLoad={() => handleImageLoad(position)}
         onError={() => handleImageError(position)}
         className={getImageClassName(position)}
         style={{ display: loadingError[position] ? 'none' : 'block' }}
+        aria-pressed={selected === position}
+        aria-label={`Option ${subcategory} for category ${pair.categoryId}`}
       />
 
       {loaded[position] && !loadingError[position] && (
-        <div className="image-label">
-          Option {subcategory}
-        </div>
+        <span className="sr-only">Subcategory {subcategory}</span>
       )}
     </div>
   );
@@ -92,28 +98,16 @@ const ImagePair = ({ pair, onSelect }) => {
     <div className="image-pair">
       <div className="pair-header">
         <h3>Category {pair.categoryId}</h3>
-        <p>Click on the image you prefer</p>
       </div>
 
-      <div className="images-container">
+      <div className="images-container" role="group" aria-label={`Image pair for category ${pair.categoryId}`}>
         {renderImage('left', pair.left, pair.leftSubcategory)}
-
-        <div className="vs-divider">
-          <span className="vs-text">VS</span>
-        </div>
-
         {renderImage('right', pair.right, pair.rightSubcategory)}
       </div>
 
-      {selected && (
-        <div className="selection-feedback">
-          <p>You selected <strong>Option {selected === 'left' ? pair.leftSubcategory : pair.rightSubcategory}</strong></p>
-          <p className="saving-indicator">Saving your response...</p>
-        </div>
-      )}
 
       <div className="pair-info">
-        <details>
+        <details className="sr-only">
           <summary>Technical Details</summary>
           <div className="image-paths">
             <p><strong>Left (Subcategory {pair.leftSubcategory}):</strong> {pair.left}</p>

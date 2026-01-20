@@ -2,7 +2,7 @@
   "name": "plankton-study",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://[YOUR_USERNAME].github.io/plankton-study",
+  "homepage": "https://daniela997.github.io/plankton-study",
   "type": "module",
   "scripts": {
     "dev": "vite",

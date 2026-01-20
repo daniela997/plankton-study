@@ -210,6 +210,10 @@ const SurveyForm = ({ familiarity }) => {
   }
 
   if (completed) {
+    const responsesArray = Object.values(session.responses);
+    const totalAnswered = responsesArray.length;
+    const successCount = responsesArray.filter((resp) => resp.selected === 'A').length;
+    const successPercent = totalAnswered > 0 ? Math.round((successCount / totalAnswered) * 100) : 0;
     return (
       <div className="survey-container">
         <div className="completion-message">
@@ -221,6 +225,7 @@ const SurveyForm = ({ familiarity }) => {
             <p><strong>Session ID:</strong> {session.participantId}</p>
             <p><strong>Categories completed:</strong> {Object.keys(session.responses).length}</p>
             <p><strong>Completed at:</strong> {new Date(session.completedAt).toLocaleString()}</p>
+          <p><strong>Real images correctly identified:</strong> {successCount} of {totalAnswered} ({successPercent}%)</p>
           </div>
 
           <div className="completion-actions">

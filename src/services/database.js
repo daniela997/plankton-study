@@ -6,7 +6,8 @@ import {
   collection,
   query,
   where,
-  getDocs
+  getDocs,
+  serverTimestamp
 } from 'firebase/firestore';
 import { db } from '../firebase';
 
@@ -40,10 +41,14 @@ export const saveParticipantSession = async (sessionData) => {
   try {
     console.log('Attempting to save session for participant:', sessionData.participantId);
     const docRef = doc(db, 'survey_sessions', sessionData.participantId);
-    await setDoc(docRef, {
-      ...sessionData,
-      lastUpdated: new Date()
-    }, { merge: true }); // Merge to preserve existing data
+    await setDoc(
+      docRef,
+      {
+        ...sessionData,
+        lastUpdated: serverTimestamp()
+      },
+      { merge: true }
+    ); // Merge to preserve existing data
     console.log('Session saved successfully for participant:', sessionData.participantId);
   } catch (error) {
     console.error('Error saving session:', error);

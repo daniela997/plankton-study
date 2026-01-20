@@ -31,8 +31,9 @@ export const generatePairForCategory = (categoryId) => {
   const imageA = getRandomItem(category.subcategories.A);
   const imageB = getRandomItem(category.subcategories.B);
 
-  const imageAPath = `/images/${categoryId}/subcategory_A/${imageA}`;
-  const imageBPath = `/images/${categoryId}/subcategory_B/${imageB}`;
+  const base = import.meta.env.BASE_URL || '/';
+  const imageAPath = `${base}images/${categoryId}/subcategory_A/${imageA}`;
+  const imageBPath = `${base}images/${categoryId}/subcategory_B/${imageB}`;
 
   // Randomly decide which subcategory goes on left vs right
   const swapOrder = Math.random() < 0.5;

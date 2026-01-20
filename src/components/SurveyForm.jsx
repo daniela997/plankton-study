@@ -279,7 +279,6 @@ const SurveyForm = ({ familiarity }) => {
           </div>
 
           <div className="completion-actions">
-            <p>You can bookmark this page to reference your session later.</p>
             <button onClick={restartSurvey} className="restart-button">
               Take Survey Again
             </button>

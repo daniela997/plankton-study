@@ -9,7 +9,7 @@ import { saveParticipantSession, loadParticipantSession, testFirebaseConnection 
 import ImagePair from './ImagePair';
 import ProgressBar from './ProgressBar';
 
-const SurveyForm = () => {
+const SurveyForm = ({ familiarity }) => {
   const [session, setSession] = useState(null);
   const [currentPair, setCurrentPair] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -89,7 +89,8 @@ const SurveyForm = () => {
           participantId,
           shuffledCategories,
           responses: {},
-          currentIndex: 0
+          currentIndex: 0,
+          familiarity
         };
 
         const firstCategoryId = shuffledCategories[0];
@@ -148,11 +149,13 @@ const SurveyForm = () => {
     // Update state immediately
     setSession(updatedSession);
 
-    if (isCompleted) {
-      setCompleted(true);
-      setCurrentPair(null);
-      localStorage.removeItem('plankton-survey-session');
-    } else {
+      if (isCompleted) {
+        setCompleted(true);
+        setCurrentPair(null);
+        localStorage.removeItem('plankton-survey-session');
+        localStorage.removeItem('plankton-survey-consent');
+        localStorage.removeItem('plankton-survey-familiarity');
+      } else {
       // Load next pair immediately
       const nextCategoryId = session.shuffledCategories[newIndex];
       const nextPair = generatePairForCategory(nextCategoryId);
@@ -175,12 +178,9 @@ const SurveyForm = () => {
   const restartSurvey = () => {
     // Clear everything and start fresh
     localStorage.removeItem('plankton-survey-session');
-    window.history.replaceState(null, null, window.location.pathname);
-    setSession(null);
-    setCurrentPair(null);
-    setCompleted(false);
-    setError(null);
-    initializeSession();
+    localStorage.removeItem('plankton-survey-consent');
+    localStorage.removeItem('plankton-survey-familiarity');
+    window.location.reload();
   };
 
   if (loading) {
